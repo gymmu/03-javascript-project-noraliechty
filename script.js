@@ -81,6 +81,7 @@ let capitalLetters = 0
     if ( currentElement === ".") {
       //do nothing
     } else if (currentElement === " ") {
+      //ignoriere Leerzeichen
     } else if (currentElement === currentElement.toUpperCase()) {
     capitalLetters++
     }
