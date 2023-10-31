@@ -37,9 +37,30 @@ export function aufgabe02(args) {
 export function aufgabe03(args) {
   const input = args
   const result = []
+  let count = 0
 
-  ffor (let i = 0; i < input.length; i++) {
+  for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    //
+    //Zähle alle 'e's die enthalten sind 
 
+    if (currentElement === 'e') {
+     count = count + 1
+    }
+    //Zähle auch alle 'E's die enthalten sind
+    if (currentElement === 'E') {
+    count = count + 1 
+    }
+
+  }
+  return count
+}
+
+export function aufgabe04(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+  
+}
 }
