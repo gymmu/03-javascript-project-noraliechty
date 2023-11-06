@@ -83,9 +83,13 @@ let capitalLetters = 0
     } else if (currentElement === " ") {
       //ignoriere Leerzeichen
     } else if (currentElement === currentElement.toUpperCase()) {
+      //es wird geprüft, ob das aktuelle Zeichen gleich ist wie die Grossbuchstabenversion des Zeichen
+    } else if ( currentElement === " " ) {
+      //TODO wenn nötiges Wissen vorhanden ist
+    }
     capitalLetters++
     }
-  }
+  
   
 
 if (capitalLetters > 0) {
@@ -94,4 +98,37 @@ if (capitalLetters > 0) {
   return false
 }
 
+}
+
+export function aufgabe06 (args) {
+const input = args 
+const result = [] 
+ 
+for (let i=0; i < input.lenght; i++) {
+  const currentElement = input[i]
+
+  if (currentElement === 'a')
+
+
+return result.join("") 
+}
+}
+
+export function aufgabe08(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+  if (currentElement === 'e') {
+    result.push("3")
+  } else if (currentElement === 'E') {
+    result.push("3")
+  } else {
+    result.push(currentElement)
+  
+  }
+  return result.join("")
+}
 }
