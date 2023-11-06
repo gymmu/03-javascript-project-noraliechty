@@ -121,14 +121,37 @@ export function aufgabe08(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
+    // 'e's werden mit 3 ersetzt
   if (currentElement === 'e') {
     result.push("3")
+    // 'E' s werden nicht ersetzt
   } else if (currentElement === 'E') {
-    result.push("3")
+    result.push("E")
+  
   } else {
     result.push(currentElement)
-  
+  }
+
+
+}
+return result.join("")
+}
+
+export function aufgabe09 (args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.lenght; i++) {
+  const currentElement = input[i]
+
+  if (currentElement === '>6' ) {
+    result.push("")
+  } else if (currentElement === 'E') {
+    result.push("")
+  }
+else {
+    result.push(currentElement)
+  }
   }
   return result.join("")
-}
 }
