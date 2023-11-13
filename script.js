@@ -104,7 +104,7 @@ export function aufgabe06 (args) {
 const input = args 
 const result = [] 
  
-for (let i=0; i < input.lenght; i++) {
+for (let i=0; i < input.length; i++) {
   const currentElement = input[i]
 
   if (currentElement === 'a')
@@ -138,20 +138,35 @@ return result.join("")
 }
 
 export function aufgabe09 (args) {
+  //Teste ob eine Eingabe genau sechs Zeichen lang ist. 
   const input = args
-  const result = []
+  let len = 0
+  for (let i = 0; i < input.length; i++) {
+  len++
+  }
 
-  for (let i = 0; i < input.lenght; i++) {
+if (len === 6) {
+  return true
+} else {
+  return false
+}
+
+}
+
+export function aufgabe11 (args) {
+//Gib den ASCII code eines einzelnen Buchstabens an.
+const input = args
+let ascii = null
+
+if (input.length > 1 ) { //Funktionswächter
+  return null
+}
+
+for (let i = 0; i < input.length; i++) {
   const currentElement = input[i]
+  ascii = currentElement.charCodeAt(0)
+    return ascii
+  }
 
-  if (currentElement === '>6' ) {
-    result.push("")
-  } else if (currentElement === 'E') {
-    result.push("")
-  }
-else {
-    result.push(currentElement)
-  }
-  }
-  return result.join("")
+return null
 }
