@@ -170,3 +170,18 @@ for (let i = 0; i < input.length; i++) {
 
 return null
 }
+
+export function aufgabe12 (args) {
+  //Suche die Position des ersten 'e's in einem Text. 
+  const input = args
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === 'e') {
+      return i
+    }
+  }
+
+  return -1
+}
+
