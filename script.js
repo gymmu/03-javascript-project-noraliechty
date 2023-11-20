@@ -59,14 +59,17 @@ export function aufgabe03(args) {
 export function aufgabe04(args) {
   const input = args
   const result = []
-  let count = 0 
+  let count = 1
 
   for (let i = 0; i < input.length; i++) {
-    const countWords = input[i]
+    const currentElement = input[i]
+    if (currentElement === ' ') {
+    count++
+    }
   //Zähle alle Wörter die enthalten sind
 
   }
-  return 2
+  return count
 }
 
 export function aufgabe05(args) {
@@ -76,42 +79,41 @@ let capitalLetters = 0
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    //Gib an ob keine Grossbuchstaben enthalten sind
+    //Gib an ob Grossbuchstaben enthalten sind
+    const ascii = currentElement.charCodeAt(0)
 
-    if ( currentElement === ".") {
-      //do nothing
-    } else if (currentElement === " ") {
-      //ignoriere Leerzeichen
-    } else if (currentElement === currentElement.toUpperCase()) {
-      //es wird geprüft, ob das aktuelle Zeichen gleich ist wie die Grossbuchstabenversion des Zeichen
-    } else if ( currentElement === " " ) {
-      //TODO wenn nötiges Wissen vorhanden ist
+    if ( 65 <= ascii && ascii <= 90) {
+      return true
     }
-    capitalLetters++
-    }
-  
-  
-
-if (capitalLetters > 0) {
-  return true 
-} else {
+  }
   return false
-}
-
 }
 
 export function aufgabe06 (args) {
 const input = args 
 const result = [] 
  
-for (let i=0; i < input.length; i++) {
-  const currentElement = input[i]
-
-  if (currentElement === 'a')
-
 
 return result.join("") 
 }
+
+
+export function aufgabe07 (args) {
+  const input = args 
+  const result = []
+
+  for (let i=0; i < input.length; i++) {
+    const currentElement = input [i]
+  if (currentElement === "u") {
+    if (input[i+1] === "n") {
+      if (input[i+2] === "d") {
+        // wenn der Code bis hier kommt, sind die Zeichen u,n,d hintereinander
+      return true
+      }
+    }
+  }
+  }
+return false 
 }
 
 export function aufgabe08(args) {
@@ -166,7 +168,7 @@ export function aufgabe10 (args) {
 
 
 export function aufgabe11 (args) {
-//Gib den ASCII code eines einzelnen Buchstabens an.
+//Gib den ASCII Code eines einzelnen Buchstabens an.
 const input = args
 let ascii = null
 
@@ -217,8 +219,20 @@ let positionOfLastE = -1
 
 export function aufgabe14 (args) {
   const input = args
-  const result = []
-  
-  return result.join("")
+  const result = 0
+  let count = 0 
+
+  for (let i = 0; i < input.length; i++) {
+const currentElement = input[i]
+
+if (currentElement === "e") {
+  count++
+  if (count === 3) {
+    return i 
+  }
+}
+}
+return -1 
 }
 
+//
