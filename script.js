@@ -212,7 +212,9 @@ return null
 }
 
 export function aufgabe12 (args) {
+
   //Suche die Position des ersten 'e's in einem Text. 
+
   const input = args
 
   for (let i = 0; i < input.length; i++) {
@@ -226,7 +228,9 @@ export function aufgabe12 (args) {
 }
 
 export function aufgabe13 (args) {
+
   //Suche die Position des letzten 'e's in einem Text. 
+
   const input = args
   const result = []
 
@@ -283,6 +287,7 @@ return result.join("")
 
 }
 
+
 export function aufgabe16 (args) {
   const input = args
   const result = []
@@ -290,12 +295,20 @@ export function aufgabe16 (args) {
   return result.join("")
 }
 
+
 export function aufgabe17 (args) {
   const input = args
   const list = []
-  
-  return result.join("")
-}
+
+  for (let i = 0; i < input.length; i++) {
+   const tmp = list [i]
+   list [i] = list [i-1]
+   list [i-1] = tmp 
+   i = 1 
+  }
+  return list
+  }
+
 
 export function aufgabe18 (args) {
   const input = args
@@ -308,3 +321,25 @@ export function aufgabe18 (args) {
 
   return result.join("")
 }
+
+
+export function aufgabe19 (args) {
+  const input = args
+  const result = []
+  
+
+  return result.join("")
+}
+
+
+export function aufgabe20 (args) {
+  const input = args
+  const result = []
+  
+
+  return false 
+
+}
+
+
+
