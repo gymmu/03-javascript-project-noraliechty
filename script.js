@@ -90,10 +90,27 @@ let capitalLetters = 0
 
 export function aufgabe06 (args) {
 const input = args 
-const result = [] 
- 
 
-return result.join("") 
+for (let i = 1; i < input.length; i++) {
+  const currentElement = input[i]
+  const ascii = currentElement.charCodeAt(0)
+  if (48 <= ascii && ascii <= 57){
+    //mache nichts; handelt sich um eine Zahl
+
+  } else if (65 <= ascii && ascii <= 90) {
+    //mache nichts; handelt sich um A-Z
+
+
+  } else if (97 <= ascii && ascii <= 122) {
+    // mache nichts; handelt sich um a-z
+
+  } else if (currentElement === " ") {
+
+  } else {
+    return true
+  }
+}
+return false 
 }
 
 
@@ -234,6 +251,8 @@ export function aufgabe14 (args) {
   for (let i = 0; i < input.length; i++) {
 const currentElement = input[i]
 
+//Ermittle die Posiiton des dritten 'e's.
+
 if (currentElement === "e") {
   count++
   if (count === 3) {
@@ -244,4 +263,48 @@ if (currentElement === "e") {
 return -1 
 }
 
-//
+export function aufgabe15 (args) {
+  const input = args 
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+// Stelle das Leerzeichen fest. 
+    if (currentElement === ' ') {
+    return result.join("")
+  }
+  // Wenn kein Leerzeichen enthalten ist, keine Unterbrechungen.
+  result.push(currentElement)
+
+}
+
+return result.join("")
+
+}
+
+export function aufgabe16 (args) {
+  const input = args
+  const result = []
+
+  return result.join("")
+}
+
+export function aufgabe17 (args) {
+  const input = args
+  const list = []
+  
+  return result.join("")
+}
+
+export function aufgabe18 (args) {
+  const input = args
+  const result = []
+  
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    
+  }
+
+  return result.join("")
+}
