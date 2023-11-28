@@ -297,17 +297,22 @@ export function aufgabe16 (args) {
 
 
 export function aufgabe17 (args) {
-  const input = args
-  const list = []
-
-  for (let i = 0; i < input.length; i++) {
-   const tmp = list [i]
-   list [i] = list [i-1]
-   list [i-1] = tmp 
-   i = 1 
+  const text = "Erster Satz. Und ein zweiter Satz. Auch noch ein dritter Satz."
+  const phrases = []
+  let currentPhrase = []
+  for (let i = 0; i < text.length; i++) {
+    const currentElement = text[i]
+    if (currentElement === '.') {
+      // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
+      phrases.push(currentPhrase.join(""))
+      currentPhrase = []  // Damit löschen wir alles was im aktuellen Satz drin war.
+    } else {
+      // Wenn wir keinen '.' lesen, dann möchten wir die Zeichen an den aktuellen Satz anhängen.
+      currentPhrase.push(currentElement)
+    }
   }
   return list
-  }
+}
 
 
 export function aufgabe18 (args) {
@@ -340,6 +345,28 @@ export function aufgabe20 (args) {
   return false 
 
 }
+
+export function aufgabe26 (args) {
+  
+  const list = args.split("") //Text wird in eine Liste umgewandelt, um anschliessend Elemente zu vertauschen.
+  for (let i = 0; i < list.length - 1; i++) {
+    const currentElement = list[i]
+    const nextElement = list[i+1]
+    if ( currentElement.charCodeAt(0) > nextElement.charCodeAt) {
+    //Elemente sollte getauscht werden
+  const tmp = list[i+1]
+  list[i+1] = list[i]
+  list[i] = tmp
+  i = 0 //starte nochmals vom Anfang aus.
+   }
+  }
+  
+  const result = list.join("")
+  return (result)
+}
+
+
+
 
 
 
