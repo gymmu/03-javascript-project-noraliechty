@@ -352,8 +352,8 @@ export function aufgabe26 (args) {
   for (let i = 0; i < list.length - 1; i++) {
     const currentElement = list[i]
     const nextElement = list[i+1]
-    if ( currentElement.charCodeAt(0) > nextElement.charCodeAt) {
-    //Elemente sollte getauscht werden
+    if ( currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+    //Elemente sollte getauscht werden.
   const tmp = list[i+1]
   list[i+1] = list[i]
   list[i] = tmp
@@ -365,8 +365,22 @@ export function aufgabe26 (args) {
   return (result)
 }
 
+export function aufgabe27 (args) {
+  const input = args 
+  const result = []
+  //ohne Eingabe wird es sofort zurückgegeben
+  if (input.length === 0) {return false}
+  for (let i = 0; i < input.length; i++) {
 
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    if (48 <= ascii && ascii <= 57) {
 
+    }
+    else return false
+  }
+  return true 
+} 
 
 
 
