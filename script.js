@@ -297,12 +297,12 @@ export function aufgabe16 (args) {
 
 
 export function aufgabe17 (args) {
-  const text = "Erster Satz. Und ein zweiter Satz. Auch noch ein dritter Satz."
+  const text = args 
   const phrases = []
   let currentPhrase = []
   for (let i = 0; i < text.length; i++) {
     const currentElement = text[i]
-    if (currentElement === '.') {
+    if (currentElement === ',') {
       // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
       phrases.push(currentPhrase.join(""))
       currentPhrase = []  // Damit löschen wir alles was im aktuellen Satz drin war.
@@ -311,7 +311,7 @@ export function aufgabe17 (args) {
       currentPhrase.push(currentElement)
     }
   }
-  return list
+  return phrases 
 }
 
 
@@ -327,16 +327,20 @@ export function aufgabe18 (args) {
   return result.join("")
 }
 
+  export function aufgabe19(args) {
+    const input = args
+    const result = []
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      result.push(currentElement)
+      result.push(currentElement)
+   
+   
+    }
+    return result.join("")
+  }
 
-export function aufgabe19 (args) {
-  const input = args
-  const result = []
-  
-
-  return result.join("")
-}
-
-
+ 
 export function aufgabe20 (args) {
   const input = args
   const result = []
