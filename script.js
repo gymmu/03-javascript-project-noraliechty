@@ -344,11 +344,15 @@ export function aufgabe18 (args) {
 export function aufgabe20 (args) {
   const input = args
   const result = []
-  
-
-  return false 
-
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+ if (currentElement === "." + ' ')
+ return true 
+  }  {
+return false 
+  }
 }
+
 
 export function aufgabe26 (args) {
   
@@ -398,8 +402,8 @@ export function bubbleSort(args) {
     if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
 
       //Die Reihenfolge sollte geändert werden und Elemente sollten vertauscht werden. 
-      const tmp = list[i + 1]
-      list[i + 1] = list[i]
+      const tmp = list[i+1]
+      list[i+1] = list[i]
       list[i] = tmp
       i = -1 //nochmals vom Anfang aus starten. 
   }
