@@ -17,7 +17,6 @@ else {
   return result.join("")
 }
 
-
 export function aufgabe02(args) {
   const input = args
   const result = []
@@ -113,7 +112,6 @@ for (let i = 1; i < input.length; i++) {
 return false 
 }
 
-
 export function aufgabe07 (args) {
   const input = args 
   const result = []
@@ -191,7 +189,6 @@ export function aufgabe10 (args) {
   
   return true 
 }
-
 
 export function aufgabe11 (args) {
 //Gib den ASCII Code eines einzelnen Buchstabens an.
@@ -287,14 +284,12 @@ return result.join("")
 
 }
 
-
 export function aufgabe16 (args) {
   const input = args
   const result = []
 
   return result.join("")
 }
-
 
 export function aufgabe17 (args) {
   const text = args 
@@ -313,7 +308,6 @@ export function aufgabe17 (args) {
   }
   return phrases 
 }
-
 
 export function aufgabe18 (args) {
   const input = args
@@ -340,7 +334,6 @@ export function aufgabe18 (args) {
     return result.join("")
   }
 
- 
 export function aufgabe20 (args) {
   const input = args
   const result = []
@@ -354,7 +347,6 @@ export function aufgabe21 (args) {
   const input = args
   const result = []
 }
-
 
 export function aufgabe26 (args) {
   
@@ -392,8 +384,6 @@ export function aufgabe27 (args) {
   return true 
 } 
 
-
-
 export function bubbleSort(args) {
 
   const text = args
@@ -414,6 +404,4 @@ export function bubbleSort(args) {
   console.log(result)
 
   return result
-
-
 }
