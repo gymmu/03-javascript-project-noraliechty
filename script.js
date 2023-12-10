@@ -4,9 +4,11 @@ export function aufgabe01(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-
+    //Lösche alle 'e's 
   if (currentElement === 'e' ) {
     result.push("")
+
+    //Lösche alle 'E's 
   } else if (currentElement === 'E') {
     result.push("")
   }
@@ -65,7 +67,7 @@ export function aufgabe04(args) {
     if (currentElement === ' ') {
      count++
     }
-  //Zähle alle Wörter die enthalten sind
+  //Zähle alle im Text enthaltenen Wörter 
   }
   return count
 }
@@ -210,7 +212,7 @@ return null
 
 export function aufgabe12 (args) {
 
-  //Suche die Position des ersten 'e's in einem Text. 
+  //Suche die Position des ersten 'e's in einem Text.
 
   const input = args
 
@@ -298,11 +300,11 @@ export function aufgabe17 (args) {
   for (let i = 0; i < text.length; i++) {
     const currentElement = text[i]
     if (currentElement === ',') {
-      // Wenn wir hier sind haben wir einen '.' gefunden, und möchten den aktuellen Satz als eine Element in phrases speichern.
+      //Wenn '.' gefunden wurde, wird der Satz als Element in phrases gespeichert
       phrases.push(currentPhrase.join(""))
-      currentPhrase = []  // Damit löschen wir alles was im aktuellen Satz drin war.
+      currentPhrase = []  //Alles aus dem aktuellen Satz herauslöschen
     } else {
-      // Wenn wir keinen '.' lesen, dann möchten wir die Zeichen an den aktuellen Satz anhängen.
+      //Falls kein '.' gefunden wurde, werden die Zeichen an den aktuellen Satz angehängt
       currentPhrase.push(currentElement)
     }
   }
@@ -326,6 +328,9 @@ export function aufgabe18 (args) {
     const result = []
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
+      
+      //Verdopple jedes in der Eingabe vorkommende Element
+
       result.push(currentElement)
       result.push(currentElement)
    
@@ -397,7 +402,7 @@ export function bubbleSort(args) {
       const tmp = list[i+1]
       list[i+1] = list[i]
       list[i] = tmp
-      i = -1 //nochmals vom Anfang aus starten. 
+      i = -1 //nochmals vom Anfang aus starten.  
   }
 }
   const result = list.join("")
