@@ -338,15 +338,26 @@ export function aufgabe18 (args) {
     }
     return result.join("")
   }
-
-export function aufgabe20 (args) {
-  const input = args
-  const result = []
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
  
-  }
-}
+    export function aufgabe20 (args) {
+      const input = args
+      const result = []
+     
+      for (let i = 0; i < input.length; i++) {
+        const currentElement = input[i]
+     
+      if (currentElement === '.' )  
+      //Teste ob nach jedem Punkt ein Leerzeichen folgt.
+      if (input [i+1] === ' ') {
+        return true
+      }
+       
+      }
+     
+    return false
+     
+    }
+  
 
 export function aufgabe21 (args) {
   const input = args
