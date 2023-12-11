@@ -355,8 +355,22 @@ export function aufgabe18 (args) {
   
 
 export function aufgabe21 (args) {
-  const input = args
+  const input = args 
   const result = []
+
+
+let positionOfLastE = -1
+
+ //Soll die Eingabe ungekehrt lesen.
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[ input.length - i -1 ]
+
+      result.push(currentElement)
+    }
+
+  return result.join("")
+
 }
 
 export function aufgabe26 (args) {
