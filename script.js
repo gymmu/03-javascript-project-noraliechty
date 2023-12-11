@@ -293,22 +293,17 @@ export function aufgabe16 (args) {
   return result.join("")
 }
 
-export function aufgabe17 (args) {
-  const text = args 
-  const phrases = []
-  let currentPhrase = []
-  for (let i = 0; i < text.length; i++) {
-    const currentElement = text[i]
-    if (currentElement === ',') {
-      //Wenn '.' gefunden wurde, wird der Satz als Element in phrases gespeichert
-      phrases.push(currentPhrase.join(""))
-      currentPhrase = []  //Alles aus dem aktuellen Satz herauslöschen
-    } else {
-      //Falls kein '.' gefunden wurde, werden die Zeichen an den aktuellen Satz angehängt
-      currentPhrase.push(currentElement)
-    }
-  }
-  return phrases 
+export function aufgabe17(args) {
+  const input = args;
+  const result = input.split(',') //Das Resultat, ist der Input, welcher mit einem ',' getrennt wird. 
+ 
+ 
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+ 
+}
+ 
+  return result.join(',') //Das Resultat wird zurückgegeben. 
 }
 
 export function aufgabe18 (args) {
