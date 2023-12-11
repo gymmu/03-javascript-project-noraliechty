@@ -409,6 +409,8 @@ export function aufgabe27 (args) {
   return true 
 } 
 
+
+
 export function bubbleSort(args) {
 
   const text = args
