@@ -409,7 +409,24 @@ export function aufgabe27 (args) {
   return true 
 } 
 
+export function  aufgabe28 (args) {
+  const input = args
+  const zahlen = input.split(' ')
+  
+  //Soll testen ob zwei Zahlen durch ein Leerzeichen getrennt werden. 
+  if (zahlen.length === 2 && !isNaN(zahlen[0]) && !isNaN(zahlen[1])) {
+    const zahl1 = parseFloat(zahlen[0]);
+    const zahl2 = parseFloat(zahlen[1]);
 
+   //Falls ja soll die Summme als Ausgabe angegeben werden. 
+    const summe = zahl1 + zahl2;
+    return `${summe}`;
+
+    //Falls nicht soll eine Fehlermeldung angegeben werden.
+} else {
+    return null
+}
+}
 
 export function bubbleSort(args) {
 
