@@ -375,6 +375,56 @@ let positionOfLastE = -1
 
 }
 
+export function aufgabe22 (args) {
+  
+const input = args
+const result = []
+let firstPart = true
+
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+
+  if (firstPart === true) {
+    result.push("_")
+  } else {
+    result.push(currentElement)
+  }
+
+
+  if (currentElement === 'k') {
+    firstPart = false
+  }
+
+}
+return result.join("")
+}
+
+
+export function aufgabe23(args) {
+  const input = args;
+  const result = [];
+
+  if (input.length === 0) {
+    return ''; //Leer zurückgeben. 
+  }
+
+  const firstChar = input.charAt(0);
+
+  result.push(firstChar); //Erstes Zeichen soll am Anfang der Ausgabe angehängt werden. 
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i];
+    result.push(currentElement);
+  }
+
+  result.push(firstChar); //Erstes Zeichen soll am Schluss der Ausgabe angehängt werden. 
+
+  return result.join('');
+}
+
+
+
+
 export function aufgabe25 (args) {
   //Das mittlere Zeichen der Eingabe soll gelöscht werden. Wenn die Anzahl gerade ist, sollen die beiden mittleren Zeichen gelöscht werden. 
 const input = args
