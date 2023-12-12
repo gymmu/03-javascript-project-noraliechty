@@ -419,11 +419,20 @@ export function aufgabe23(args) {
 
   result.push(firstChar); //Erstes Zeichen soll am Schluss der Ausgabe angehängt werden. 
 
-  return result.join('');
+  return result.join("")
 }
 
+export function aufgabe24 (args) {
+
+const input = args
+const result = []
 
 
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+
+}
+}
 
 export function aufgabe25 (args) {
   //Das mittlere Zeichen der Eingabe soll gelöscht werden. Wenn die Anzahl gerade ist, sollen die beiden mittleren Zeichen gelöscht werden. 
