@@ -313,6 +313,8 @@ export function aufgabe18 (args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     
+    
+
   }
 
   return result.join("")
@@ -372,6 +374,44 @@ let positionOfLastE = -1
   return result.join("")
 
 }
+
+export function aufgabe25 (args) {
+  //Das mittlere Zeichen der Eingabe soll gelöscht werden. Wenn die Anzahl gerade ist, sollen die beiden mittleren Zeichen gelöscht werden. 
+const input = args
+const result = []
+
+if (input.length % 2 === 0 ){
+  //prüft ob input.length gerade ist
+
+
+  //brauchen -1 um auf Position zu kommmen, weil wir bei 0 zu zählen beginnnen. 
+const pos = input.length / 2 - 1 
+
+for (let i = 0; i < input.length; i ++) {
+const currentElement = input[i]
+if (i === pos || i === pos + 1) {
+//mache nichts 
+} else {
+  result.push (currentElement)
+}
+}
+
+} else {
+//input.length ist ungerade
+const pos = Math.floor(input.length / 2)
+
+for (let i = 0; i < input.length; i++) {
+  const currentElement = input[i]
+  if (i === pos) {
+    //mache nichts
+} else {
+  result.push (currentElement)
+}
+}
+}
+return result.join("")
+}
+
 
 export function aufgabe26 (args) {
   
