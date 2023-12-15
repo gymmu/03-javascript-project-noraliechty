@@ -165,7 +165,7 @@ export function aufgabe09 (args) {
 
 if (len === 6) {
   return true
-} else {
+} else {//Wenn die Eingabe nicht genau sechs Zeichen lang ist, sollte 'falsch' zurückgegeben werden. 
   return false
 }
 
@@ -254,7 +254,7 @@ export function aufgabe14 (args) {
   for (let i = 0; i < input.length; i++) {
 const currentElement = input[i]
 
-//Ermittle die Posiiton des dritten 'e's.
+//Ermittle die Position des dritten 'e's.
 
 if (currentElement === "e") {
   count++
@@ -304,20 +304,6 @@ for (let i = 0; i < input.length; i++) {
 }
  
   return result.join(',') //Das Resultat wird zurückgegeben. 
-}
-
-export function aufgabe18 (args) {
-  const input = args
-  const result = []
-  
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    
-    
-
-  }
-
-  return result.join("")
 }
 
   export function aufgabe19(args) {
@@ -384,12 +370,15 @@ let firstPart = true
 for (let i = 0; i < input.length; i++) {
   const currentElement = input[i]
 
+  //Tausche alle Zeichen der Eingabe mit '_' aus. 
+
   if (firstPart === true) {
     result.push("_")
   } else {
     result.push(currentElement)
   }
 
+  //Tausche alle Zeichen mit '_' aus, bis und mit dem ersten 'k'. 
 
   if (currentElement === 'k') {
     firstPart = false
@@ -426,6 +415,8 @@ export function aufgabe24 (args) {
   const input = args
   const result = []
  
+//Vertausche das erste und letztes Zeichen der Eingabe miteinander. 
+
   if (input.length === 1) return input
   const firstElem=input[0]
   const lastElem=input[input.length-1]
@@ -441,7 +432,9 @@ result.push(firstElem)
 }
 
 export function aufgabe25 (args) {
-  //Das mittlere Zeichen der Eingabe soll gelöscht werden. Wenn die Anzahl gerade ist, sollen die beiden mittleren Zeichen gelöscht werden. 
+
+  //Das mittlere Zeichen der Eingabe soll gelöscht werden. Wenn die Anzahl gerade ist, sollen die beiden mittleren Zeichen gelöscht werden.
+
 const input = args
 const result = []
 
